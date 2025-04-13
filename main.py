@@ -21,9 +21,9 @@ async def main():
 
         @dp.message(Command('start'))
         async def start(message: types.Message):
-            await message.answer("Привет! Напиши /weather Москва")
+            await message.answer("Привет! Напиши /погода Москва")
 
-        @dp.message(Command('weather'))
+        @dp.message(Command('погода'))
         async def weather(message: types.Message):
             try:
                 city = message.text.split(maxsplit=1)[1]
